@@ -11,7 +11,7 @@ const Card = ({ thumb, tipo, endereco, valor, slug }) => {
         <img src={`${urlApi}/uploads/${thumb}`} alt="" />
       </Img>
       <Description>
-        <h4>{tipo}</h4>
+        <h4>{tipo}</h4>git
         <Itens>
           <span>
             <FaMapMarkerAlt />
