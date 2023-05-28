@@ -45,34 +45,6 @@ const Footer = () => {
             </li>
           </ul>
         </Item>
-        <Item>
-          <h3>Our Services</h3>
-          <ul>
-            <li>
-              <span>Comprar</span>
-            </li>
-            <li>
-              <span>Alugar</span>
-            </li>
-            <li>
-              <span>Vender</span>
-            </li>
-          </ul>
-        </Item>
-        <Item>
-          <h3>Our Services</h3>
-          <ul>
-            <li>
-              <span>Comprar</span>
-            </li>
-            <li>
-              <span>Alugar</span>
-            </li>
-            <li>
-              <span>Vender</span>
-            </li>
-          </ul>
-        </Item>
       </Container>
       <Copy>
         <p>Aluno: Sidnei M. Mitani - CV3016447</p>
