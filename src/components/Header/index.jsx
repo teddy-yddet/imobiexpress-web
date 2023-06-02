@@ -18,7 +18,7 @@ const Header = () => {
           <img src={LogoImg} alt="" />
         </Link>
       </Logo>
-      <h1>Imobiliária Federal</h1>
+      <h1>IMOBILIÁRIA FEDERAL</h1>
       <Menu>
         <ul>
           {!userLogged ? (
