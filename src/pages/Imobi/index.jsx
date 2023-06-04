@@ -17,7 +17,7 @@ import {
   ProfileFormContact,
   ProfileImg,
   Right,
-  Thumb
+  Thumb,
 } from "./styles";
 import { toast } from "react-toastify";
 
@@ -28,12 +28,12 @@ const Imobi = () => {
   useEffect(() => {
     Api.get(`/listimobi/${slug}`)
       .then((response) => {
-        setDataImobi(response.data)
+        setDataImobi(response.data);
       })
       .catch(() => {
-        console.log("Erro: Erro ao listar imóvel")
-      })
-  }, [])
+        console.log("Erro: Erro ao listar imóvel");
+      });
+  }, []);
 
   const {
     tipo,
@@ -44,23 +44,23 @@ const Imobi = () => {
     name,
     email,
     telefone,
-    userId
+    userId,
   } = dataimobi;
 
-  const [client_name, setClinteName] = useState('');
-  const [client_email, setClinteEmail] = useState('');
-  const [client_mensagem, setClinteMensagem] = useState('');
+  const [client_name, setClinteName] = useState("");
+  const [client_email, setClinteEmail] = useState("");
+  const [client_mensagem, setClinteMensagem] = useState("");
 
   const dataMessage = {
     client_name,
     client_email,
     client_mensagem,
-    userId
-  }
+    userId,
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Api.post('/createmessage', dataMessage)
+    Api.post("/createmessage", dataMessage)
       .then((response) => {
         if (!response.data.error === true) {
           toast(response.data.message);
@@ -69,16 +69,12 @@ const Imobi = () => {
         }
       })
       .catch(() => {
-        console.log('Erro: Erro no sistema')
-      })
-  }
+        console.log("Erro: Erro no sistema");
+      });
+  };
   return (
     <Fragment>
-      <TopBanner
-        tipo={tipo}
-        descricao={descricao}
-        thumb={thumb}
-      />
+      <TopBanner tipo={tipo} descricao={descricao} thumb={thumb} />
       <Container>
         <Left>
           <Thumb>
@@ -94,7 +90,10 @@ const Imobi = () => {
         <Right>
           <Profile>
             <ProfileImg>
-              <img src="https://images.unsplash.com/placeholder-avatars/extra-large.jpg?dpr=1&auto=format&fit=crop&w=150&h=150&q=60&crop=faces&bg=fff" alt="" />
+              <img
+                src="https://images.unsplash.com/placeholder-avatars/extra-large.jpg?dpr=1&auto=format&fit=crop&w=150&h=150&q=60&crop=faces&bg=fff"
+                alt=""
+              />
             </ProfileImg>
             <ProfileDescriptin>
               <h3>{name}</h3>
@@ -109,11 +108,7 @@ const Imobi = () => {
           <ProfileFormContact>
             <h3>Contate o anunciante</h3>
             <form onSubmit={handleSubmit} autoComplete="off">
-              <Input
-                type="hidden"
-                name="userId"
-                value={userId}
-              />
+              <Input type="hidden" name="userId" value={userId} />
               <Input
                 type="text"
                 placeholder="Nome:"
@@ -137,7 +132,7 @@ const Imobi = () => {
         </Right>
       </Container>
     </Fragment>
-  )
-}
+  );
+};
 
 export default Imobi;

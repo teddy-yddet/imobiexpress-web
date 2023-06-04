@@ -11,7 +11,7 @@ const TopBanner = ({ tipo, descricao, thumb }) => {
         <p>{descricao}</p>
       </Text>
     </Container>
-  )
-}
+  );
+};
 
 export default TopBanner;

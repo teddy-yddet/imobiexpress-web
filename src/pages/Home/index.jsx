@@ -25,14 +25,7 @@ const Home = () => {
       </Header>
       <Wrapper>
         {imobi.map((items) => (
-          <Card
-            key={items.id}
-            thumb={items.thumb}
-            tipo={items.tipo}
-            endereco={items.endereco}
-            valor={items.valor}
-            slug={items.slug}
-          />
+          <Card />
         ))}
       </Wrapper>
     </Fragment>
