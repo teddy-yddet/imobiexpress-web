@@ -50,13 +50,13 @@ const Footer = () => {
         <p>Aluno: Sidnei M. Mitani - CV3016447</p>
         <ul>
           <li>
-            <span>Termos de Uso</span>
+            <span>ADS</span>
           </li>
           <li>
-            <span>Política de Privacidade</span>
+            <span>Desenvolvimento de sistemas WEB</span>
           </li>
           <li>
-            <span>Política de Cookies</span>
+            <span>5º semestre</span>
           </li>
         </ul>
       </Copy>

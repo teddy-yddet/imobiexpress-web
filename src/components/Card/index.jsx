@@ -11,13 +11,13 @@ const Card = ({ thumb, tipo, endereco, valor, slug }) => {
         <img src={`${urlApi}/uploads/${thumb}`} alt="" />
       </Img>
       <Description>
-        <h4>{tipo}</h4>git
+        <h4>{tipo}</h4>
         <Itens>
           <span>
             <FaMapMarkerAlt />
             {endereco}
           </span>
-          <span>R$ {valor} / mês</span>
+          <span>R$ {valor}</span>
         </Itens>
         <Link to={`/imovel/${slug}`}>
           Detalhes <FaArrowRight />
